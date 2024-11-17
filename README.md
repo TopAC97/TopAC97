@@ -1,7 +1,21 @@
-- 👀 🍄Holaa soy Topacio, estoy en primer semestre de la U.
-- 🌺Este repositorio es sobre una tarea de una materia de la U,🌺
-- 💥💥aunque también tendrá ejercicios en (JS, Html, CSS) que he realizado hasta ahora.💥💥
-- 🐻🐰Quiero tener organizado mis códigos aqui para no tenerlos regados en el equipo.🐻🐰
+function ejercicio5(){
+  let inicio = 0, final = 0, r = 0;
+  const tab = 2; // 🍄 el const se usa para una variable que tiene un valor y no requiere ser cambiado
+  inicio = document.getElementById("inicio").value; // ☘️ toma un elemento que tenga ese id en el documento html que tenemos
+  final = document.getElementById("final").value; // ☘️ este es igual
+  inicio = parseInt(inicio); // 🐳 convierte caracteres alfanuméricos a numérico
+  final = parseInt(final); // 🐳 a la variable tab no se le utiliza parseInt() porque la variable ya tiene un valor fijo, en este caso, numérico
+  let resultado = document.getElementById("resp");
+  resultado.innerHTML = ""; // 🍥 limpia lo que haya en la etiqueta para agregar una respuesta
+  while (inicio <= final) {
+    r = inicio % tab;
+    if (r === 0) {
+      resultado.innerHTML += `${inicio} es par \n`
+      console.log(inicio + " es par ");
+    }
+    inicio = inicio + 1;
+  }
+}
 
 
 <!---
